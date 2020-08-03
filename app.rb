@@ -1,7 +1,8 @@
-#encoding: utf-8
 require 'rubygems'
 require 'sinatra'
 require 'sinatra/reloader'
+require 'sinatra/activerecord'
+require './model/Product'
 
 def herb(template, options={}, locals={})
 	render "html.erb", template, options, locals
