@@ -11,3 +11,7 @@ end
 get '/' do
   herb :index
 end
+
+get '/about' do
+  herb :about
+end
