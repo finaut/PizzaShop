@@ -30,3 +30,22 @@ function add_to_cart(id)
     window.localStorage.setItem(key, x);
     alert(x);
 }
+ // функция для возвращения товара из localStorage
+
+function cart_get_number_of_items()
+{
+    var cnt = 0;
+    // пока переменная i  = 0 будут выполнятся слудующие действия
+    // если i меньше общего значения элементов в локальном хранилише
+    for(var i = 0; i < window.localStorage.length; i++ )
+    {
+        var key = window.localStorage.key(i); // g et key, в руби аналог это ruby: x
+        var value = window.localStorage.getItem(key); // get value
+
+        if(key.indexOf('product_') == 0)
+        {
+            cnt = cnt + (value * 1);
+        };
+        return cnt;
+    }
+}
