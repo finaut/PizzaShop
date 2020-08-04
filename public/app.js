@@ -3,7 +3,12 @@
 // it will do var x like in and we do this x = x + 1
 // then we set var in localStorage
 
-function something(){
+
+function add_to_cart(id) {
+    alert('You add pizza: ' + id);
+}
+
+function something() {
 
     // как бы это выглядело в руби
     var x = window.localStorage.getItem('key'); // эта конструкция равносильна x = hh['key']
