@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="development" uuid="a10a5e56-1a07-4199-bc19-314052746be6">
+    <data-source source="LOCAL" name="SQLite - PizzaShop.sqlite3" uuid="aa1111c7-65d4-4a0e-a80b-5ef13aee51b7">
       <driver-ref>sqlite.xerial</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:C:\Users\Samurai\RubymineProjects\PizzaShop\db\development.sqlite3</jdbc-url>
+      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/db/PizzaShop.sqlite3</jdbc-url>
     </data-source>
   </component>
 </project>

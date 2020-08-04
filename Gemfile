@@ -1,7 +1,8 @@
-source "https://rubygems.org"
+source 'https://rubygems.org'
 
-gem "sinatra"
+gem 'activerecord'
+gem 'rake'
+gem 'sinatra'
+gem 'sinatra-activerecord'
 gem 'sinatra-reloader'
 gem 'sqlite3'
-gem 'activerecord'
-gem 'sinatra-activerecord'

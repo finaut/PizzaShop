@@ -23,6 +23,7 @@ GEM
       rack
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
+    rake (13.0.1)
     sinatra (1.4.4)
       rack (~> 1.4)
       rack-protection (~> 1.4)
@@ -52,6 +53,7 @@ PLATFORMS
 
 DEPENDENCIES
   activerecord
+  rake
   sinatra
   sinatra-activerecord
   sinatra-reloader

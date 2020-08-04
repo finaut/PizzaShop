@@ -10,7 +10,6 @@ class CreateProducts < ActiveRecord::Migration[6.0]
       t.boolean :is_best_offer # админ сможет держать вверху лучшие предложение
       t.string :path_to_image # путь расположение фотографии
 
-
       t.timestamps
     end
   end
