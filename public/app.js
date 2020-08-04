@@ -4,9 +4,7 @@
 // then we set var in localStorage
 
 
-function add_to_cart(id) {
-    alert('You add pizza: ' + id);
-}
+
 
 function something() {
 
@@ -14,5 +12,21 @@ function something() {
     var x = window.localStorage.getItem('key'); // эта конструкция равносильна x = hh['key']
     x = (x * 1) + 1; // x = x + 1 <-- таким образом мы преобразовуем строку в число
     window.localStorage.setItem('key', x); // hh['key'] = x
+    alert(x);
+}
+
+function add_to_cart(id)
+{
+    var key = 'product_' + id
+    // инцализируем новую переменную внутри функции
+    // она будет хранится в локальной памяти браузера
+    var x = window.localStorage.getItem(key);
+    // тоесть x будет названием для какого-то элемента для нашего асоциативного массива
+    // тоесть сейчас мы даем название нашему элементу
+    // product_1 - будет будет означать что бы для id - 1 тоесть маргартта сделал 1 заказ
+    // и если мы еще раз нажнем на заказать маргариту то значение увелчтся на 1
+    x = (x * 1) + 1;
+    // сохраняем в памяти эти значения что бы мы знали чему какой id cоответствует
+    window.localStorage.setItem(key, x);
     alert(x);
 }
