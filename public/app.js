@@ -14,7 +14,10 @@ function  add_to_cart(id) {
     x =(x*1) + 1;
     // и под конец мы записываем все наши ключи value в локальное хранилище
     window.localStorage.setItem(key,x);
+
+    alert('Items in your cart: ' + cart_get_number_of_items())
 }
+
     // в этой функции мы будем присваивать значения
 function cart_get_number_of_items() {
 
@@ -44,4 +47,20 @@ function cart_get_number_of_items() {
         }
     }
     return cnt ;
+}
+
+// сейчас я хочу написать функцию которая будет записывать значение в input text
+function cart_get_orders(){
+    var orders = '' ;
+
+    for(var i = 0; i < window.localStorage.length; i++){
+
+        var key = window.localStorage.key(i);
+        var value = window.localStorage.getItem(key);
+
+        if(key.indexOf('product_')===0){
+            orders = orders + key + '=' + value + ',';
+        }
+    }
+    return orders
 }
