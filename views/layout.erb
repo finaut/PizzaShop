@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
 		<title>Sinatra + Twitter Bootstrap</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -36,7 +36,9 @@
 							<li><a href="/contacts">Contacts</a></li>
 						</ul>
 						<ul class="nav navbar-nav navbar-right">
-							<li><input type="submit" class="btn btn-primary btn-lg" value="Cart(...)"/></li>
+							<form action="/cart" method="post">
+								<li><input type="submit" class="btn btn-primary btn-lg" value="Cart(...)"/></li>
+							</form>
 						</ul>
 					</div><!--/.nav-collapse -->
 				</nav>
