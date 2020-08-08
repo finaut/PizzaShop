@@ -15,9 +15,21 @@ function  add_to_cart(id) {
     // и под конец мы записываем все наши ключи value в локальное хранилище
     window.localStorage.setItem(key,x);
 
-    alert('Items in your cart: ' + cart_get_number_of_items())
+//    alert('Items in your cart: ' + cart_get_number_of_items())
+    update_orders_inputs();
+    update_orders_button();
 }
 
+function update_orders_inputs() {
+    var orders  = cart_get_orders()
+    $('#orders_input').val(orders);
+}
+
+function update_orders_button() {
+    var orders = cart_get_number_of_items()
+    $('#orders_button').val('Cart ('+orders + ')')
+
+}
     // в этой функции мы будем присваивать значения
 function cart_get_number_of_items() {
 

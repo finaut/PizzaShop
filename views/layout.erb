@@ -37,8 +37,8 @@
 						</ul>
 						<form action="/cart" method="post">
 							<div class="nav navbar-nav navbar-right">
-									<input type="text" name="orders">
-									<input type="submit" class="btn btn-primary btn-lg" value="Cart(...)"/>
+									<input type="hidden" id="orders_input" name="orders">
+									<input type="submit" id="orders_button" class="btn btn-primary btn-lg" value="Cart(...)"/>
 							</div>
 						</form>
 					</div><!--/.nav-collapse -->
@@ -54,3 +54,10 @@
 		</div>
   </body>
 </html>
+
+<script type="text/javascript" charset="utf-8">
+	$(function(){
+		update_orders_button()
+		update_orders_inputs()
+	})
+</script>

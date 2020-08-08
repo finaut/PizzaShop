@@ -25,5 +25,32 @@ get '/about' do
 end
 
 post '/cart' do
-  herb "Hello!"
+  # задача получить значения из orders
+  orders  = params[:orders]
+  @orders = parse_orders_line orders  #  запускаем нашу функцию
+
+
+  erb "Hello ! #{parse_orders_line orders}"
+end
+
+
+# метод для обработки элемента
+#
+def parse_orders_line orders
+  string1 = orders.split(/,/)
+  arr = []
+
+  string1.each do |x|
+    # определяем новые переменную
+    string2 = x.split(/=/)
+    string3 = string2[0].split(/_/)
+
+    id = string3[1]
+    cnt = string2[1]
+
+    arr2 = [id, cnt]
+
+    arr.push( arr2)
+  end
+  return arr.inspect
 end
